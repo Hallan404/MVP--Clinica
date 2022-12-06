@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon" />
+    <!-- import css  -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- importando as fontes  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Clinica Médica UniAmor</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <nav class="nav">
+        <div class="container-logo">
+          <div class="logo-cab">
+            <span class="nome-cab">Clínica Médica</span
+            ><span class="nome-cab">UniAmor</span>
+          </div>
+          <img src="../IMG/logo-m.png" alt="" class="img-logo-cab" />
+        </div>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="../index.html" class="link-menu"> Home</a>
+          </li>
+          <li class="menu-item" title="Saiba mais sobre nós!">
+            <a href="./about.html" class="link-menu">Sobre</a>
+          </li>
+
+          <li class="menu-item">
+            <button class="login-btn">
+              <a href="./login.html" class="link-menu">Entrar</a>
+            </button>
+            <button class="register-btn">
+              <a href="./cadastral_form.html" class="link-menu">Registrar</a>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="consultas">
+      <form class="form-consulta" action="post">
+        <span class="txt-cabeca">Agende já sua consulta</span>
+        <label for="nome">Digite seu nome completo</label>
+        <input class="form-input" type="text" name="nome" id="" />
+        <label for="cpf">Digite seu CPF</label>
+        <input
+          type="text"
+          name="cpf"
+          id="cpf"
+          maxlength="14"
+          oninput="criaMask(this)"
+          class="form-input"
+        />
+        <label for="matricula">Digite seu número de cadastro </label>
+        <input class="form-input" type="text" name="matricula" id="" />
+        <label for="espec">Selecione uma especialidade</label>
+        <select class="form-input" name="espec" id="">
+          <option value="clinico">Clínico Geral</option>
+          <option value="cardio">Cardiologia</option>
+          <option value="pediatria">Pediatria</option>
+          <option value="ortopedia">Ortopedia</option>
+          <option value="gineco">Ginecologia e Obstetricia</option>
+        </select>
+        <label for="data/hora">Escolha uma data e horário</label>
+        <input
+          class="form-input"
+          type="datetime-local"
+          name="data/hora"
+          id=""
+        />
+
+        <button id="btn-agenda" type="submit">Agendar</button>
+      </form>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
